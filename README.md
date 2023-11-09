@@ -1,26 +1,23 @@
-# Search Game
+# 🔎 김치게임
 
-"김치 게임", "백종원 게임" 등의 검색 게임을 간편하고 직관적으로 사용하기 위해 만든 게임입니다.
-구글, 네이버 등 포털의 검색 결과를 찾아주는 프로젝트 입니다.
+검색 게임을 간편하고 직관적으로 사용하기 위해 만든 게임입니다.
+구글, 네이버 등 포털의 검색 결과를 찾아주는 프로젝트입니다.
+
 
 ## Available Scripts
 
 In the project directory, you can run:
+    `yarn start`
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `yarn test`
+    `yarn test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+    `yarn build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
