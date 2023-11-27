@@ -18,16 +18,22 @@ const SearchResult = ({data, keyword}:{data:any, keyword:string}) => {
 	console.log(data);
 	console.log(filterList);
 	// let dataList: JSX.Element = data;
+	//${item.pagemap.cse_image[0].src}
 
 	function ReturnHtml():any {
 		return (
-			filterList && filterList.map((item:any) => 
-			<li>
-			${item.title}
-			</li>
-			<span dangerouslySetInnerHTML={{__html: data.period}}></span>
-			<li><img src="${item.pagemap.cse_image[0].src}" /><li>
-			<li>${item.link}<li>
+			filterList && filterList.map((item:any) =>
+				<ul>
+					<li>
+					${item.title}
+					</li>
+					<li>
+					${item.link}
+					</li>
+				</ul> 
+				// <span dangerouslySetInnerHTML={{__html: data.period}}></span>
+				// <li><img src="" /><li>
+				// <li>${item.link}<li>
 			)
 		)
 	}
@@ -35,9 +41,9 @@ const SearchResult = ({data, keyword}:{data:any, keyword:string}) => {
 
 	return (
 		<div className='search-result-wrap'>
-			<ul>
+			<div>
 				<ReturnHtml />
-			</ul>
+			</div>
 		</div>
 	)
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoUrl from '../../../assets/images/logo.png';
+import LogoUrl from '../../../assets/images/common/logo.png';
 import Nav from './Nav';
 
 
