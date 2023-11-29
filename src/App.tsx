@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Routes>
           <Route path='/' element={<Main />}/>
-          <Route path='/hello' element={<Search />}/>
+          <Route path='kimchi' element={<Search />}/>
       </Routes>
     </>
   );

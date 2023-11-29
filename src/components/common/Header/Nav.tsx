@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 
 const Nav = () => {
 	return (
-		<ul>
-			<Link to="/">main1</Link>
-		</ul>
+		<div className="navi">
+			<button>토글</button>
+			<ul>
+				<Link to="/">main1</Link>
+				<Link to="/kimchi">김치게임</Link>
+			</ul>
+		</div>
 	);
 };
 
