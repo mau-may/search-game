@@ -1,6 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import { Route, Routes } from 'react-router';
 import { Header } from './components/common/Header';
 import { Main } from './pages/Main';
@@ -9,13 +7,13 @@ import { Search } from './pages/Search';
 
 function App() {
   return (
-    <>
+    <div className="sober-wrap">
       <Header />
       <Routes>
           <Route path='/' element={<Main />}/>
           <Route path='kimchi' element={<Search />}/>
       </Routes>
-    </>
+    </div>
   );
 }
 

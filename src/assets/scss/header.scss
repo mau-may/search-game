@@ -1,7 +1,50 @@
 .header-wrap{
+    position: relative;
     display:flex;
     justify-content: space-between;
     align-items: center;
+    height: 70px;
 
-    .logo{max-width: 100px;}
+    .logo{
+        position: absolute;
+        left:50%; transform: translateX(-50%);
+        max-width: 40px; text-align: center;
+        img{width: 100%;}
+    }
+    
+    .menu-wrap{
+        position: relative;
+
+        .show-menu{
+            max-width: 1000px;
+            margin:0 auto;
+            position:fixed;
+            top:0; left:0; right:0; bottom:0;
+            background-color:#fff;
+            overflow:visible;
+            z-index: 999;
+            .bg{
+                max-width: 1000px;
+                width:100%;
+                height:100vh;
+                background-color:rgba(0,0,0,.2);
+            }
+            .nav{
+                max-width: 1000px;
+                position: absolute;
+                left:0; top:0; bottom:0;
+                width:50%; height:100vh;
+                background-color: #fff;
+            }
+        }
+        .hide-menu{
+            height:0;
+            background-color:none;
+            overflow: hidden;
+        }
+
+        .nav{
+            
+        }
+    }
 }

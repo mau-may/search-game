@@ -8,8 +8,8 @@ const Header = () => {
 	return (
 		<header className="header-wrap">
 			<Nav />
-			<a href="/">
-				<img className="logo" src={LogoUrl} alt="술뽀" />
+			<a href="/" className="logo">
+				<img src={LogoUrl} alt="술뽀" />
 			</a>
 			<a href="">QR코드</a>
 		</header>
