@@ -11,7 +11,7 @@ const Header = () => {
 			<a href="/" className="logo">
 				<img src={LogoUrl} alt="술뽀" />
 			</a>
-			<a href="">QR코드</a>
+			<a href="" className='qr-code'>QR코드</a>
 		</header>
 	);
 };

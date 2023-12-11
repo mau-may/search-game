@@ -1,8 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;300;400;500;600;700&display=swap');
+
 .sober-wrap{
     width:100%;
     max-width: 1000px;
     margin:0 auto;
-    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-family: 'Pretendard', sans-serif;
+    font-weight:400;
+    letter-spacing: -0.01em;
 
+    .copy{
+        position: absolute;
+        bottom:20px;
+        font-weight: 900; letter-spacing: -0.045px; 
+    }
 }
