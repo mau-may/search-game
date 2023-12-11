@@ -6,9 +6,12 @@ import Nav from './Nav';
 
 const Header = () => {
 	return (
-		<header>
-			<img className="logo" src={LogoUrl} alt="" />
+		<header className="header-wrap">
 			<Nav />
+			<a href="/" className="logo">
+				<img src={LogoUrl} alt="술뽀" />
+			</a>
+			<a href="" className='qr-code'>QR코드</a>
 		</header>
 	);
 };
