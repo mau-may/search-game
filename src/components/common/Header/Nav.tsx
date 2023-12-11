@@ -32,7 +32,7 @@ const Nav = () => {
 						<h4 className="title-mini"><img src={phoneWithText} alt="내 폰으로 모여" /></h4>
 						<ul className="menu-link" onClick={handleToggleMenu}>
 							<li><Link to="/kimchi"><img src={kimchi} alt="김치" /><span>김치게임</span></Link></li>
-							<li><Link to="/kimchi"><img src={stopwatch} alt="스톱워치" /><span>스톱워치 게임</span></Link></li>
+							<li><Link to="/stopwatch"><img src={stopwatch} alt="스톱워치" /><span>스톱워치 게임</span></Link></li>
 						</ul>
 						<address className="copy">ⓒ SOBER SISTERS</address>
 					</div>
