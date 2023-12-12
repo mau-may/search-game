@@ -1,3 +1,3 @@
-// import '../../assets/scss/main.scss';
+import '../../assets/scss/gametype.scss';
 
 export { default as With } from './With';

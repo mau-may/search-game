@@ -8,7 +8,6 @@ import { Type } from './pages/Type';
 import { With } from './pages/With';
 import { Search } from './pages/Search';
 import { NotFound } from './pages/NotFound';
-// import { Layout, LoginLayout, MainLayout } from './components/common/Layout';
 
 function App() {
   return (
