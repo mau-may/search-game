@@ -1,0 +1,31 @@
+
+.game-type-wrap{
+    padding:0 20px;
+
+    .type-subject{
+        text-align: center;
+        
+        nav{
+            position: relative;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+
+            .title-img{
+                height:48px;
+                img{height: 100%;}
+            }
+
+            .nav-btn {
+                position: absolute;
+                
+            }
+
+            .nav-btn.left{left:0;}
+            .nav-btn.right{right:0;}
+        }
+        .desc{
+            margin:5px auto 26px;
+        }
+    }
+}

@@ -17,15 +17,15 @@ const Main = () => {
 			<ul className="main-btn-wrap">
 				<li>
 					<Link to="/alone">
-						<img src={withText} alt={t(`main.phone-with`)} />
-						<img src={withImg} className="viewImg" alt={t(`main.phone-with`)} />
+						<img src={withText} alt={t(`main.summary-with`)} />
+						<img src={withImg} className="viewImg" alt={t(`main.summary-with`)} />
 						<span>{t(`main.summary-with`)}</span>
 					</Link>
 				</li>
 				<li>
 					<Link to="/with">
-						<img src={aloneText} alt={t(`main.phone-alone`)} />
-						<img src={aloneImg} className="viewImg" alt={t(`main.phone-alone`)} />
+						<img src={aloneText} alt={t(`main.summary-alone`)} />
+						<img src={aloneImg} className="viewImg" alt={t(`main.summary-alone`)} />
 						<span>{t(`main.summary-alone`)}</span>
 					</Link>
 				</li>
