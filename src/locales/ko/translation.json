@@ -6,7 +6,8 @@
         "kimchi": "김치게임",
         "stopwatch": "스톱워치 게임",
         "phone-with": "내 폰으로 모여",
-        "phone-alone": "각자 폰으로 해"
+        "phone-alone": "각자 폰으로 해",
+        "start": "시작하기"
     },
     "main": {
         "summary-with": "한 명의 핸드폰으로 여러 명이 게임을 즐겨요",
