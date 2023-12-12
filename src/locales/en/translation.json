@@ -1,14 +1,22 @@
 {
     "header": {
-        "mypage": "My page",
-        "logout": "Sign Out",
-        "login": "Sign In",
-        "register": "Sign Up",
-        "language": "Languages",
-        "help": "Help"
+        "qr": "QR 코드"
     },
-    "nav": {
-        "dashboard": "Dashboard",
-        "shopping-mall": "Shopping Mall"
+    "common": {
+        "kimchi": "김치게임",
+        "stopwatch": "스톱워치 게임",
+        "phone-with": "내 폰으로 모여",
+        "phone-alone": "각자 폰으로 해"
+    },
+    "main": {
+        "summary-with": "한 명의 핸드폰으로 여러 명이 게임을 즐겨요",
+        "summary-alone": "여러 명이 자신의 핸드폰으로 게임을 즐겨요"
+    },
+    "notfound": {
+        "title": "잘못된 페이지입니다.",
+        "summary": "좋은 곳으로 모시겠습니다."
+    },
+    "etc": {
+        "doing": "애기 더 재밌는 게임 개발 중.."
     }
 }

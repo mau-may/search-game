@@ -4,8 +4,10 @@ import LogoUrl from '../../../assets/images/common/logo.png';
 import phoneWithText from '../../../assets/images/common/text_with.png';
 import kimchi from '../../../assets/images/icon/kimchi.png';
 import stopwatch from '../../../assets/images/icon/stopwatch.png';
+import { useTranslation } from "react-i18next";
 
 const Nav = () => {
+	const { t } = useTranslation();
 	const [menu, setMenu] = useState(false);  // 메뉴의 초기값을 false로 설정
 
 
@@ -31,8 +33,8 @@ const Nav = () => {
 						<Link className="logo-img" to="/"  onClick={handleToggleMenu}><img src={LogoUrl} alt="술뽀" /></Link>
 						<h4 className="title-mini"><img src={phoneWithText} alt="내 폰으로 모여" /></h4>
 						<ul className="menu-link" onClick={handleToggleMenu}>
-							<li><Link to="/kimchi"><img src={kimchi} alt="김치" /><span>김치게임</span></Link></li>
-							<li><Link to="/stopwatch"><img src={stopwatch} alt="스톱워치" /><span>스톱워치 게임</span></Link></li>
+							<li><Link to="/kimchi"><img src={kimchi} alt={t(`common.kimchi`)} /><span>{t(`common.kimchi`)}</span></Link></li>
+							<li><Link to="/stopwatch"><img src={stopwatch} alt={t(`common.stopwatch`)} /><span>{t(`common.stopwatch`)}</span></Link></li>
 						</ul>
 						<address className="copy">ⓒ SOBER SISTERS</address>
 					</div>
