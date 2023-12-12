@@ -7,6 +7,7 @@ import { Alone } from './pages/Alone';
 import { Type } from './pages/Type';
 import { With } from './pages/With';
 import { Search } from './pages/Search';
+import { NotFound } from './pages/NotFound';
 // import { Layout, LoginLayout, MainLayout } from './components/common/Layout';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path='type' element={<Type />}/>
           <Route path='kimchi' element={<Search />}/>
           <Route path='stopwatch' element={<Search />}/>
+          <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

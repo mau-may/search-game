@@ -15,4 +15,12 @@
     footer{
         .copy{text-align: center; margin-top:30px;}
     }
+
+    .btn{
+        display: inline-block;
+        padding:10px 30px;
+        border:1px solid #000;
+        border-radius: 5px;
+        font-size:14px;
+    }
 }
