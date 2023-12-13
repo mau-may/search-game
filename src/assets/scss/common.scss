@@ -6,6 +6,9 @@
     font-family: 'Pretendard', sans-serif;
     font-weight:400;
     letter-spacing: -0.01em;
+    .notice, .guide {
+        white-space: pre-line;
+    }
 
     .copy{
         font-size: 13px;
@@ -18,11 +21,20 @@
 
     .btn{
         display: inline-block;
-        padding:10px 30px;
+        padding:12px 40px;
         border:1px solid #000;
         border-radius: 5px;
-        font-size:14px;
+        font-size:1em;
+        font-weight: 600;
         text-align:center;
+
+        &.primary {
+            background-color:#FFB6E1;
+        }
+
+        &.default {
+            background-color:#F5F5F5;
+        }
     }
 
 

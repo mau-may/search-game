@@ -11,6 +11,7 @@ const KimchiMain = () => {
 		<div className="kimchi-wrap">
 			<GameSubject type="kimchi" />
 			<Link to="/kimchi/start" className="btn w100">{t(`common.start`)}</Link>
+			<div className="notice">{t(`kimchi.notice`)}</div>
 		</div>
 	);
 };

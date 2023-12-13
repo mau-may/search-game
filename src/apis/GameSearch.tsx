@@ -5,7 +5,6 @@ export const GameSearch = async (params: any) => {
 	params.cx = process.env.REACT_APP_SEARCH_CX;
 
 	try {
-
 		const res = await searchAxios.get(
 			'/customsearch/v1',
 			{params}

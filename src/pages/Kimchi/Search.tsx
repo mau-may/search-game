@@ -1,16 +1,27 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
+import { GameSubject } from '../../components/Gamesubject';
 import { SearchBar, SearchKeyword } from '../../components/Kimchi';
 import { useTranslation } from "react-i18next";
+import { Modal } from '../../components/common/Modal';
+
 
 
 const Search = () => {
 	const { t } = useTranslation();
+	const [searchList, setSearchList]:any = useState([]);
+	const [inputList, setInputList]:any = useState([]);
+	const [confirmModal, setConfirmModal]:any = useState(false);
+	// const [confirmHtml, setConfirmHtml]:HTMLElement = useState('<div></div>');
 	
 	return (
-		<div className='kimchi-wrap'>
-			<h3>김치가 될만한 과일, 채소를 입력하세요</h3>
-			<SearchBar />
-			<SearchKeyword />
+		<div className="kimchi-wrap">
+			<GameSubject type="kimchi" />
+			<SearchBar searchList={searchList} setSearchList={setSearchList} 
+						inputList={inputList} setInputList={setInputList} />
+			<div className="notice">{t(`kimchi.notice`)}</div>
+
+			<SearchKeyword data={inputList} />
+			<Modal isOpen={confirmModal} ></Modal>
 		</div>
 	);
 };

@@ -1,10 +1,15 @@
 
 .kimchi-wrap{
     padding:0 20px;
-    .btn{width:100%;}
 
 
     input.search-bar{
         border:1px solid red;
+    }
+    .notice{
+        text-align: center;
+        margin-top:15px;
+        font-size:0.9em;
+        color:rgba(0,0,0,.3);
     }
 }
