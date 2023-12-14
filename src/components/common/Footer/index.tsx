@@ -1,4 +1,4 @@
 import Footer from './Footer';
-// import '../../../assets/scss/footer.scss';
+// import '../../../assets/scss/footer.scss';
 
 export { Footer };

@@ -1,12 +1,10 @@
 import React from 'react';
 import { Route, Routes } from 'react-router';
 import { Header } from './components/common/Header';
-import { Footer } from './components/common/Footer';
 import { Main } from './pages/Main';
 import { Alone } from './pages/Alone';
-import { Type } from './pages/Type';
 import { With } from './pages/With';
-import { Search } from './pages/Search';
+import { Search, KimchiMain, KimchiResult } from './pages/Kimchi';
 import { NotFound } from './pages/NotFound';
 
 function App() {
@@ -17,12 +15,13 @@ function App() {
           <Route path='/' element={<Main />}/>
           <Route path='with' element={<With />}/>
           <Route path='alone' element={<Alone />}/>
-          <Route path='type' element={<Type />}/>
-          <Route path='kimchi' element={<Search />}/>
           <Route path='stopwatch' element={<Search />}/>
           <Route path="/*" element={<NotFound />} />
+
+          {/* <Route path='kimchi' element={<KimchiMain />}/> */}
+          <Route path='kimchi' element={<Search />}/>
+          <Route path='kimchi/result' element={<KimchiResult />}/>
       </Routes>
-      <Footer />
     </div>
   );
 }

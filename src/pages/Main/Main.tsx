@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Footer } from '../../components/common/Footer';
 import soberGif from '../../assets/images/main/main.gif';
 import aloneImg from '../../assets/images/main/phone_alone.png';
 import aloneText from '../../assets/images/common/text_alone.png';
@@ -12,6 +13,7 @@ const Main = () => {
 	const { t } = useTranslation();
 
 	return (
+		<>
 		<div className='main-wrap'>
 			<img src={soberGif} alt="SOBER SISTERS" />
 			<ul className="main-btn-wrap">
@@ -31,6 +33,8 @@ const Main = () => {
 				</li>
 			</ul>
 		</div>
+		<Footer />
+		</>
 	);
 };
 
