@@ -89,6 +89,7 @@ const SearchBar = ({searchList, setSearchList, inputList, setInputList }:{search
 	}
 
 	const addKeyword = () => {
+		//Todo : Modal 떠야함
 		setInputList([...inputList, orgKw]);
 	}
 

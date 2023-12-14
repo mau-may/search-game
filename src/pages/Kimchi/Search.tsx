@@ -21,7 +21,7 @@ const Search = () => {
 			<div className="notice">{t(`kimchi.notice`)}</div>
 
 			<SearchKeyword data={inputList} />
-			<Modal isOpen={confirmModal} ></Modal>
+			{/* <Modal isOpen={confirmModal} ></Modal> */}
 		</div>
 	);
 };
