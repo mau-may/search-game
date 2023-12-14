@@ -110,8 +110,8 @@ const SearchBar = ({searchList, setSearchList, inputList, setInputList }:{search
 				<div className="search-bar">
 					<div className="text-bg"><img src={searchTextBox} /></div>
 					<input type="text" value={orgKw} onChange={Keyword} placeholder={t(`kimchi.input-placeholder`)} maxLength={10} />
-					<div className="text-thinking"><img src={searchThinking} /></div>
 				</div>
+				<div className="text-thinking"><img src={searchThinking} /></div>
 				<div className="search-img"><img src={searchImg} /></div>
 				
 				<button type="submit" className="btn primary" onClick={fnGetList}>{t(`common.search`)}</button>

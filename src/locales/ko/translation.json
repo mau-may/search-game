@@ -25,7 +25,9 @@
     "kimchi": {
         "notice": "*구글코리아 웹 기준 1페이지에 노출된\n 김치 키워드가 들어간 결과를 집계한 데이터 사용",
         "input-guide": "김치가 될만한\n 과일, 채소 아무거나 입력하세요.",
-        "input-placeholder": "과일, 채소를 입력하세요."
+        "input-placeholder": "과일, 채소를 입력하세요.",
+        "result-have":"는\n 있습니다!",
+        "result-already":"는\n 이미 나왔습니다!"
     },
     "etc": {
         "doing": "애기 더 재밌는 게임 개발 중.."
