@@ -1,6 +1,7 @@
 
 .kimchi-wrap{
     padding:0 20px;
+    overflow-x:hidden;
 
 
     input.search-bar{
@@ -11,5 +12,49 @@
         margin-top:15px;
         font-size:0.9em;
         color:rgba(0,0,0,.3);
+    }
+
+    .search-bar-wrap{
+        text-align: center;
+        .search-bar{
+            position: relative;
+            text-align: center;
+            height:200px;
+
+            .text-bg{
+                // position: absolute;
+                // left:50%; top:0;
+                // transform: translateX(-50%);
+                // margin:0 auto;
+                // max-width: inherit;
+                // min-width:260px;
+                img{
+
+                }
+            }
+            .text-thinking{
+                img{}
+                // position: absolute;
+                // bottom:10px; left:50%;
+                // transform: translateX(-50%);
+                // margin:0 auto;
+                // max-width: inherit;
+                // min-width:260px;
+            }
+
+            input[type=text]{
+                position: absolute;
+                top:50px; left:0; right:0;
+                width:100%; max-width: 160px;
+                border:none; box-shadow: none; background-color:transparent;
+                font-size:1em;
+                outline:none;
+                margin:0 auto;
+            }
+        }
+
+        .search-img{
+            // margin-top:-60px;
+        }
     }
 }
