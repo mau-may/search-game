@@ -24,7 +24,6 @@ const SearchBar = ({searchList, setSearchList, inputList, setInputList }:{search
 	// 초기 실행
 	useEffect(() => {
 		if(resultType== "again" && pathData && !againFlag){
-			console.log(pathData);
 			setAgainFlag(true);
 			pathData && pathData.map((item:any) => {
 				setInputList(item.keyword_list); //검색했던 리스트 저장
@@ -52,7 +51,7 @@ const SearchBar = ({searchList, setSearchList, inputList, setInputList }:{search
 		setSearchList(await GameSearch(params));
 
 		//모달 오픈
-		setModalOpen(true);
+		setModalOpen(!modalOpen);
 	}
 
 
@@ -110,14 +109,13 @@ const SearchBar = ({searchList, setSearchList, inputList, setInputList }:{search
 				resultObj.keyword = orgKw + " " + KIMCHI_KEYWROD;
 				resultObj.title = item.title;
 				resultObj.link = item.link;
-				resultObj.image = item?.pagemap.cse_image[0].src;
+				resultObj.image = item?.pagemap?.cse_image[0].src;
 
 				const newKeywordArray:any = [];
 				inputList && inputList.map((item:any) => {
 					if(item && !newKeywordArray.includes(item)) newKeywordArray.push(item);
 				});
 				newKeywordArray.push(orgKw);
-				console.log(newKeywordArray);
 				resultObj.keyword_list = newKeywordArray;
 	
 				state.type = "result";
@@ -131,7 +129,6 @@ const SearchBar = ({searchList, setSearchList, inputList, setInputList }:{search
 	}
 
 	const addKeyword = () => {
-		//Todo : Modal 떠야함
 		if(orgKw) setInputList([...inputList, orgKw]);
 		setKw(""); //input 초기화
 	}
@@ -168,7 +165,7 @@ const SearchBar = ({searchList, setSearchList, inputList, setInputList }:{search
 				<button type="submit" className="btn primary" onClick={fnGetList}>{t(`common.search`)}</button>
 				{/* <SearchResult 	data={searchList} keyword={orgKw}  /> */}
 			</form>
-			<Modal isOpen={modalOpen} img={noSearch} content={noSearchContent} btnType={"confirm"} />
+			<Modal isOpen={modalOpen} setIsOpen={setModalOpen} img={noSearch} content={noSearchContent} btnType={"confirm"} />
 		</div>
 	);
 };

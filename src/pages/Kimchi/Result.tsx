@@ -15,7 +15,7 @@ const Result = () => {
 	const [inputList, setInputList]:any = useState(''); //키워드 저장
 
 	useEffect(() => {
-		console.log(resultData);
+		// console.log(resultData);
 		if(resultData.length > 0){
 			setData();
 		}

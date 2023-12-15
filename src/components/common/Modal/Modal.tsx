@@ -39,19 +39,19 @@ interface ModalProps {
 	onRequestClose: () => void;
 }
 
-const Modal = ({ isOpen, img, content, btnType }:{isOpen:boolean, img:string, content:any, btnType:string}) => {
+const Modal = ({ isOpen, setIsOpen, img, content, btnType }:{isOpen:boolean, setIsOpen:any, img:string, content:any, btnType:string}) => {
 	const { t } = useTranslation(); //appElement:HTMLElement
-	const [modalClose, setModalClose]:any = useState(isOpen);
 	// 모달을 닫을 때 onRequestClose 함수 호출
+
 	const closeModal = () => {
-		setModalClose(false);
+		setIsOpen(false);
 	};
 	useEffect(() => {
 	},[]);
 	
 	return (
-		<ReactModal isOpen={modalClose} 
-				onRequestClose={() => closeModal()}
+		<ReactModal isOpen={isOpen} 
+				// onRequestClose={() => closeModal()}
 				shouldCloseOnOverlayClick={true} ariaHideApp={false} 
 				style={customModalStyles} >
 			<div className="modal-content">
