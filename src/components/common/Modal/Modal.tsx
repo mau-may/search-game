@@ -1,9 +1,10 @@
-import React from 'react';
+import { Component, useEffect, useState } from 'react';
 import LogoUrl from '../../../assets/images/common/logo.png';
 import qr from '../../../assets/images/icon/qr.png';
 import { useTranslation } from "react-i18next";
 import ReactModal from 'react-modal';
 import i18n from "../../../locales/i18n";
+import { FALSE } from 'sass';
 
 
 const customModalStyles: ReactModal.Styles = {
@@ -17,26 +18,57 @@ const customModalStyles: ReactModal.Styles = {
 		left: "0",
 	},
 	content: {
-		width: "360px",
-		height: "180px",
+		display: "flex",
+		width: "80%",
 		zIndex: "150",
 		position: "absolute",
 		top: "50%",
 		left: "50%",
 		transform: "translate(-50%, -50%)",
 		borderRadius: "10px",
-		boxShadow: "2px 2px 2px rgba(0, 0, 0, 0.25)",
+		border:"1px solid #000",
+		boxShadow:"none",
 		backgroundColor: "white",
+		alignItems: "center",
 		justifyContent: "center",
-		overflow: "auto",
+		overflow: "hidden",
 	},
 };
+interface ModalProps {
+	children: React.ReactNode;
+	onRequestClose: () => void;
+}
 
-const Modal = ({ isOpen, msg }:{isOpen:boolean, msg:string}) => {
+const Modal = ({ isOpen, img, content, btnType }:{isOpen:boolean, img:string, content:any, btnType:string}) => {
 	const { t } = useTranslation(); //appElement:HTMLElement
+	const [modalClose, setModalClose]:any = useState(isOpen);
+	// 모달을 닫을 때 onRequestClose 함수 호출
+	const closeModal = () => {
+		setModalClose(false);
+	};
+	useEffect(() => {
+	},[]);
 	
 	return (
-		<ReactModal isOpen={isOpen} style={customModalStyles}>
+		<ReactModal isOpen={modalClose} 
+				onRequestClose={() => closeModal()}
+				shouldCloseOnOverlayClick={true} ariaHideApp={false} 
+				style={customModalStyles} >
+			<div className="modal-content">
+				{img 
+					? (<img src={img} className="thumb" />) 
+					: ("")}
+				<div className="content">
+					{content()}
+				</div>
+				<div className="btn-wrap">
+				{
+					btnType === "confirm" ?
+					( <button className="btn primary" onClick={closeModal}>{t(`common.confirm`)}</button> ) 
+					: ( <button className="btn default" onClick={closeModal}>{t(`common.close`)}</button> )
+				}
+				</div>
+			</div>
 		</ReactModal>
 	);
 };

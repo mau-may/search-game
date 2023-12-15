@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router';
 import { Header } from './components/common/Header';
 import { Main } from './pages/Main';
+
 import { Alone } from './pages/Alone';
 import { With } from './pages/With';
 import { Search, KimchiMain, KimchiResult } from './pages/Kimchi';

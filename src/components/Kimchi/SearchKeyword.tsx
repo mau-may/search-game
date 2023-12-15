@@ -4,13 +4,11 @@ const SearchKeyword = ({data}:{data: string[]}) => {
 	// console.log(data);
 	
 	return (
-		<div className='search-keyword-wrap'>
-			
+		<ul className="keyword-wrap">
 			{data && data.map((item, idx) => (
-					<div key={idx}>{item}</div>
-				)
-			)}
-		</div>
+				<li key={idx} className="keyword">{item}</li>
+			))}
+		</ul>
 	);
 };
 
