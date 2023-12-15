@@ -13,16 +13,37 @@
             box-sizing: border-box;
             padding:20px;
             text-align: center;
+            font-size:14px;
 
             a{
                 display: block;
                 color:rgba(0,0,0,.7);
-                font-size:12px;
                 word-break: keep-all;
 
-                img.viewImg{ display:block;  width:auto; height: 108px; margin:0 auto 10px;}
 
-                span{line-height:1.2em;}
+            }
+
+            .viewImg{ 
+                display:block;  width:auto; height: 108px; 
+                margin:0 auto 10px;
+            }
+            span{line-height:1.2em; white-space: pre-line;}
+
+            &.develop{
+                opacity: 0.3;
+                
+                .viewImg{
+                    position: relative;
+
+                    .badge{
+                        position: absolute;
+                        left:50%; top:20%;
+                        z-index: 1;
+                        background-color: #fff;
+                        border:1px solid #000;
+                        transform:translateX(-50%);
+                    }
+                }
             }
         }
     }

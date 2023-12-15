@@ -51,7 +51,7 @@ const SearchBar = ({searchList, setSearchList, inputList, setInputList }:{search
 		
 		setSearchList(await GameSearch(params));
 
-		//Todo 여기서 모달 띄우면 됨
+		//모달 오픈
 		setModalOpen(true);
 	}
 
