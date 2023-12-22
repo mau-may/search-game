@@ -1,8 +1,6 @@
-  # Deploy container image to Cloud Run
-  - name: 'gcr.io/cloud-builders/gcloud'
-    entrypoint: gcloud
-    args: [
-      'run',
-      'app',
-      'deploy'
-    ]
+steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
+  - app
+  - deploy
