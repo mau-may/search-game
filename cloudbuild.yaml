@@ -1,14 +1,11 @@
 steps:
-- name: 'gcr.io/cloud-builders/yarn:node-16'
-  args: ['install', '--ignore-engines']
-  dir: 'functions/autodeploy'
-
-- name: 'gcr.io/cloud-builders/npm:node-16'
+- name: 'node16'
+  entrypoint: 'yarn'
+  args: ['install']
+- name: 'node16'
+  entrypoint: 'yarn'
   args: ['test']
-  dir: 'functions/autodeploy'
-
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy', 'someName', '--runtime', 'nodejs16']
-  dir: 'functions/autodeploy'
+  args: ['app', 'deploy']
 options:
   logging: CLOUD_LOGGING_ONLY
