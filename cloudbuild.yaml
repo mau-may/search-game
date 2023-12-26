@@ -1,11 +1,13 @@
 steps:
-- name: 'node'
-  entrypoint: 'yarn'
-  args: ['install']
-- name: 'node'
-  entrypoint: 'yarn'
+- name: 'gcr.io/cloud-builders/yarn:node-16'
+  args: ['install', '--ignore-engines']
+  dir: 'functions/autodeploy'
+
+- name: 'gcr.io/cloud-builders/npm:node-10.10.0'
   args: ['test']
+  dir: 'functions/autodeploy'
+
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy']
-options:
-  logging: CLOUD_LOGGING_ONLY
+  args: ['functions', 'deploy', 'someName', '--trigger-topic', 
+  'some.topic.name', '--runtime', 'nodejs10']
+  dir: 'functions/autodeploy'
