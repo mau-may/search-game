@@ -58,6 +58,6 @@
     "@types/react-native-dotenv": "^0.2.1"
   },  
   "engines": {
-    "node": "20.10.0"
+    "node": "21.5.0"
   }
 }

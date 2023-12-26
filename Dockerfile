@@ -1,4 +1,4 @@
-FROM node:20.10.0 AS builder
+FROM node:21.5.0 AS builder
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN yarn install
