@@ -1,11 +1,11 @@
 steps:
-- name: 'node-16'
+- name: 'node'
   entrypoint: 'yarn'
   args: ['install']
-- name: 'node-16'
+- name: 'node'
   entrypoint: 'yarn'
   args: ['test']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy', 'nodejs16']
+  args: ['app', 'deploy']
 options:
   logging: CLOUD_LOGGING_ONLY
