@@ -1,12 +1,16 @@
 steps:
-- name: 'node'
+- name: 'gcr.io/cloud-builders/yarn:node-16.20.2'
   entrypoint: 'yarn'
   args: ['install', '--ignore-engines']
-- name: 'node'
+- name: 'gcr.io/cloud-builders/yarn:node-16.20.2'
   entrypoint: 'yarn'
-  args: ['test', '--ignore-engines']
+  args: ['test']
+  env:
+    - "REACT_APP_ENV=${_REACT_APP_ENV}"
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy', '--ignore-engines']
+  env:
+    - "REACT_APP_ENV=${_REACT_APP_ENV}"
 options:
   logging: CLOUD_LOGGING_ONLY
 
