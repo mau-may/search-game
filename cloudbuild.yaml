@@ -4,9 +4,9 @@ steps:
   args: ['install', '--ignore-engines']
 - name: 'node'
   entrypoint: 'yarn'
-  args: ['test']
+  args: ['test', '--ignore-engines']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy']
+  args: ['app', 'deploy', '--ignore-engines']
 options:
   logging: CLOUD_LOGGING_ONLY
 
