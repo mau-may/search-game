@@ -1,11 +1,13 @@
 steps:
 - name: 'node'
   entrypoint: 'yarn'
-  args: ['install']
+  args: ['install', '-tag=gcr.io/$PROJECT_ID/yarn=${_NODE_VERSION}', '--ignore-engines']
 - name: 'node'
   entrypoint: 'yarn'
-  args: ['test']
+  args: ['test', '-tag=gcr.io/$PROJECT_ID/yarn=${_NODE_VERSION}']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy']
 options:
   logging: CLOUD_LOGGING_ONLY
+
+timeout: 2400s
