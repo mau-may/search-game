@@ -1,10 +1,10 @@
 steps:
 - name: 'node'
   entrypoint: 'yarn'
-  args: ['install', '-tag=gcr.io/$PROJECT_ID/yarn=${_NODE_VERSION}', '--ignore-engines']
+  args: ['install', '--ignore-engines']
 - name: 'node'
   entrypoint: 'yarn'
-  args: ['test', '-tag=gcr.io/$PROJECT_ID/yarn=${_NODE_VERSION}']
+  args: ['test']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy']
 options:
