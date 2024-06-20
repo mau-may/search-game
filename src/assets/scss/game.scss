@@ -1,6 +1,5 @@
 @import "./mixin";
-
-.kimchi-wrap{
+.game-wrap{
     padding:0 20px;
     overflow-x:hidden;
 
@@ -10,6 +9,11 @@
         font-size:0.9em;
         color:rgba(0,0,0,.3);
     }
+}
+
+.kimchi-wrap{
+    padding:0 20px;
+    overflow-x:hidden;
 
     .search-bar-wrap{
         text-align: center;
@@ -133,6 +137,44 @@
 
     }
 }
+
+.stopwatch-wrap{
+    text-align: center;
+
+    &>section{
+        padding:0 40px;
+        max-width: 500px;
+        margin:0 auto;
+    }
+
+    .count-section-wrap{margin-bottom:40px;}
+    .count-wrap{
+        display: flex;
+        position: relative;
+        height:40px;
+        border:1px solid #000;
+        border-radius: 5px;
+        margin-bottom:10px;
+
+        button{
+            width:10%;
+            border:none;
+            background:none;
+            height:100%;
+        }
+        input[type=number]{
+            width:80%; height:100%;
+            box-shadow: none;
+            border:none;
+            text-align: center;
+        }
+        input[type=number]:focus{
+            outline:none;
+        }
+    }
+
+}
+
 @media (max-width: 561px) {
     .text-thinking{
         margin-top:-10% !important;

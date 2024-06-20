@@ -14,7 +14,7 @@ const Search = () => {
 	// const [confirmHtml, setConfirmHtml]:HTMLElement = useState('<div></div>');
 	
 	return (
-		<div className="kimchi-wrap">
+		<div className="game-wrap kimchi-wrap">
 			<GameSubject type="kimchi" />
 			<SearchBar searchList={searchList} setSearchList={setSearchList} 
 						inputList={inputList} setInputList={setInputList} />

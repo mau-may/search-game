@@ -15,7 +15,7 @@ const GameSubject = ({type}:{type:string}) => {
 		if(type === "kimchi"){
 			setTextImg(textKimchi);
 			setDesc(t(`game-desc.kimchi`));
-		} else {
+		} else if(type === "stopwatch") {
 			setTextImg(textStopWatch);
 			setDesc(t(`game-desc.stopwatch`));
 		}
